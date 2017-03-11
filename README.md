@@ -14,3 +14,5 @@ Implementation of the 0-1 (binary) Knapsack Problem
 - Put a 0 as the 1st element of `values` and `weights`
 - `memoizationTable` and `chosenItems` are both initialized to dimensions `[numberOfItems+1][knapsackWeightCapacity+1]` to keep it indexed from 1
 - Pseudocode has step to set all values in 0th row to 0. **Not needed since Java initialized the entire 2D array to 0's**
+- `findWidestNumberInTable()`, `findWidestElementInList()` and `leftPad()` are all helper methods used by `printTable()`
+- `printTable()` is pretty fancy & prints padding spaces to the left of numbers so the columns line up. It looks nicer, but doesn't have to be that complicated
