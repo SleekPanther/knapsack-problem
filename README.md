@@ -16,3 +16,4 @@ Implementation of the 0-1 (binary) Knapsack Problem
 - Pseudocode has step to set all values in 0th row to 0. **Not needed since Java initialized the entire 2D array to 0's**
 - `findWidestNumberInTable()`, `findWidestElementInList()` and `leftPad()` are all helper methods used by `printTable()`
 - `printTable()` is pretty fancy & prints padding spaces to the left of numbers so the columns line up. It looks nicer, but doesn't have to be that complicated
+- A `true` in `chosenItems` means that an item was added to get that max value when calculating `memoizationTable`, `false` means it just **copied the value from the row above**
