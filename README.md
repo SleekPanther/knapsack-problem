@@ -7,21 +7,21 @@ w is the current max weight of the knapsack (goes from 0 to W, the actual max we
 - If the item CAN fit there are 2 cases
   1. The current item is not included, just copy from row above: `OPT(i-1,w)`
   2. Current iten IS included, add it's value & find OPT for a new weight: `vi + OPT(i-1,w-wi)`
-![](https://raw.githubusercontent.com/SleekPanther/knapsack-problem/master/picturres/optimal-substructure.png)
+![](pictures/optimal-substructure.png)
 
 ##Pseudocode
-![](https://raw.githubusercontent.com/SleekPanther/knapsack-problem/master/picturres/pseudocode.png)
+![](pictures/pseudocode.png)
 
 ##Finding the Knapsack's Contents
 A slightly different version of the algorithm, but the point is the final loop that recovers the items from the keep array
-![](https://raw.githubusercontent.com/SleekPanther/knapsack-problem/master/picturres/knapsack-pseudocode-backtrack.png)
+![](pictures/knapsack-pseudocode-backtrack.png)
 
 ##Example Problem
-![](https://raw.githubusercontent.com/SleekPanther/knapsack-problem/master/picturres/items.png)
+![](pictures/items.png)
 This program runs on 5 items with 2 differnt weight capacites: 11 and 10
 
 ###Capacity=11 Solution
-![](https://raw.githubusercontent.com/SleekPanther/knapsack-problem/master/picturres/w%3D11-table.png)
+![](pictures/w%3D11-table.png)
 ###Optimal Solution is total value=40 from item 3 & 4
 
 
