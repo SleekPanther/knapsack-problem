@@ -27,6 +27,9 @@ This program runs on 5 items with 2 different weight capacities: 11 and 10
 
 ##Notes
 - `solveKnapsack()` populates the memoization table & finds the maximum weight possible
+  - `memoizationTable` is filled with `-1` to distinguish from completed rows
+  - Then 0th row is filled with `0`
+  - `memoizationTable` is printed using `printTable()` after each row is completed
 - `findOptimalKnapsackContents()` is called after `solveKnapsack()` to see what items were actually added
 - **The ID or name of an Item is its array index**
 - Must be **non-negative** integer weights
