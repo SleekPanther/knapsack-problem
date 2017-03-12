@@ -6,7 +6,7 @@ Implementation of the 0-1 (binary) Knapsack Problem
 - If wi>W, the item it too heavy to fit in the knapsack, so we copy the value from row above: `OPT(i-1,w)`
 - If the item CAN fit there are 2 cases
   1. The current item is not included, just copy from row above: `OPT(i-1,w)`
-  2. Current iten *IS* included, add it's value & find OPT for a new weight: `vi + OPT(i-1,w-wi)`
+  2. Current item *IS* included, add it's value & find OPT for a new weight: `vi + OPT(i-1,w-wi)`
 ![](pictures/optimal-substructure.png)
 
 ##Pseudocode
@@ -18,7 +18,7 @@ A slightly different version of the algorithm, but the point is the final loop t
 
 ##Example Problem
 ![](pictures/items.png)
-This program runs on 5 items with 2 differnt weight capacites: 11 and 10
+This program runs on 5 items with 2 different weight capacities: 11 and 10
 
 ###Capacity=11 Solution
 ![](pictures/w%3D11-table.png)
@@ -49,6 +49,6 @@ There is no error checking between those 3 fields, so hard-code them into the co
   - `i` goes from `numberOfItems` down to 1
   - If a value is `true`, we included that item in the knapsack so output the item @ row `i`
   - Since we included an Item, subtract its weight from `currentCapacity` ( `currentCapacity -= weights[i] -= weights[i]` )  
-  This weill move the `currentCapacity` left some number of columns
+  This will move the `currentCapacity` left some number of columns
   - Continue until it reaches the 1st row
   - Done
