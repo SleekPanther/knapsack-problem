@@ -1,7 +1,7 @@
 # 0-1 Knapsack Problem
 Implementation of the 0-1 (binary) Knapsack Problem
 
-##Optimal Substructure
+## Optimal Substructure
 **w is the current max weight of the knapsack** (goes from 0 to W, the actual max weight of the knapsack)  
 - If wi>W, the item it too heavy to fit in the knapsack, so we copy the value from row above: `OPT(i-1,w)`
 - If the item CAN fit there are 2 cases
@@ -9,23 +9,23 @@ Implementation of the 0-1 (binary) Knapsack Problem
   2. Current item *IS* included, add it's value & find OPT for a new weight: `vi + OPT(i-1,w-wi)`
 ![](pictures/optimal-substructure.png)
 
-##Pseudocode
+## Pseudocode
 ![](pictures/pseudocode.png)
 
-##Finding the Knapsack's Contents
+## Finding the Knapsack's Contents
 A slightly different version of the algorithm, but the point is the final loop that recovers the items from the keep array
 ![](pictures/knapsack-pseudocode-backtrack.png)
 
-##Example Problem
+## Example Problem
 ![](pictures/items.png)
 This program runs on 5 items with 2 different weight capacities: 11 and 10
 
-###Capacity=11 Solution
+### Capacity=11 Solution
 ![](pictures/w%3D11-table.png)
-###Optimal Solution is total value=40 from item 3 & 4
+### Optimal Solution is total value=40 from item 3 & 4
 
 
-##Notes
+## Notes
 - `solveKnapsack()` populates the memoization table & finds the maximum weight possible
   - `memoizationTable` is filled with `-1` to distinguish from completed rows
   - Then 0th row is filled with `0`
@@ -38,7 +38,7 @@ There is no error checking between those 3 fields, so hard-code them into the co
 `verifyCorrectArrayLength()` can be used to see if the array lengths match `numberOfItems`, but it's not enforced
 - View output with **fixed-width font** for columns to line up (configure your IDE or copy to new document)
 
-##Code Details
+## Code Details
 - Arrays are indexed from 1 to make human readable
 - Put a 0 as the 1st element of `values` and `weights`
 - `memoizationTable` and `chosenItems` are both initialized to dimensions `[numberOfItems+1][knapsackWeightCapacity+1]` to keep it indexed from 1
