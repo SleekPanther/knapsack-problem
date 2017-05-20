@@ -1,5 +1,6 @@
 # 0-1 Knapsack Problem
-Implementation of the 0-1 (binary) Knapsack Problem
+Implementation of the 0-1 (binary) Knapsack Problem  
+Technically an NP-Hard problem, so this solution doesn't scale for large values of the Knapsack Capacity
 
 ## Optimal Substructure
 **w is the current max weight of the knapsack** (goes from 0 to W, the actual max weight of the knapsack)  
@@ -17,7 +18,7 @@ A slightly different version of the algorithm, but the point is the final loop t
 ![](pictures/knapsack-pseudocode-backtrack.png)
 
 ## Example Problem
-![](pictures/items.png)
+<img src="pictures/items.png" width="350">  
 This program runs on 5 items with 2 different weight capacities: 11 and 10
 
 ### Capacity=11 Solution
